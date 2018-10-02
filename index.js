@@ -39,8 +39,8 @@ function unshortRecursive (urls, options, resolve, reject, depth=0) {
 	.catch(reject)
 }
 
-function unshort (url, options) {
-	options.method = options.method || "HEAD"
+function unshort (url, options={}) {
+	options.method = options.method || "GET"
 	options.max_depth = options.max_depth || 10
 
 	var urls = []
