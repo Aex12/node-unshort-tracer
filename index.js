@@ -7,7 +7,7 @@ function unshortOneTime (url, options) {
 		var parsed_url = parseUrl(url)
 		var protocol = (parsed_url.protocol === "https:") ? https : http
 		var host = parsed_url.host
-		var path = parsed_url.pathname
+		var path = parsed_url.path
 
 		options = Object.assign(options, {host, path})
 
