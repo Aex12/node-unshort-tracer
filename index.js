@@ -22,10 +22,10 @@ function unshortOneTime (url, method="HEAD") {
 }
 
 function unshortRecursive (urls, options, resolve, reject, depth=0) {
-	var long_url = urls[urls.length-1]
-
 	if(options.max_depth === depth)
 		return resolve(urls)
+
+	var long_url = urls[urls.length-1]
 
 	unshortOneTime(long_url, options.method)
 	.then(unshorted_url => {
