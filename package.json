@@ -1,0 +1,27 @@
+{
+  "name": "unshort-tracer",
+  "version": "1.0.0",
+  "description": "A simple library that let you unshort any url and trace all redirections",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aex12/node-unshort-tracer.git"
+  },
+  "keywords": [
+    "unshort",
+    "tracer",
+    "shorturl",
+    "unshortener",
+    "expand",
+    "url"
+  ],
+  "author": "Alex Caston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aex12/node-unshort-tracer/issues"
+  },
+  "homepage": "https://github.com/Aex12/node-unshort-tracer#readme"
+}
