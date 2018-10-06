@@ -2,7 +2,7 @@ const parseUrl = require('url').parse
 const http = require('http')
 const https = require('https')
 
-function unshortOneTime (url, options) {
+function unshortOneTime (url, options={}) {
 	return new Promise((resolve, reject) => {
 		var parsed_url = parseUrl(url)
 		var protocol = (parsed_url.protocol === "https:") ? https : http
@@ -23,8 +23,8 @@ function unshortOneTime (url, options) {
 	})
 }
 
-function unshortRecursive (urls, options, resolve, reject, depth=0) {
-	if(options.max_depth === depth)
+function unshortRecursive (urls, options={}, resolve, reject, depth=0) {
+	if(options.max_depth && options.max_depth === depth)
 		return resolve(urls)
 
 	var long_url = urls[urls.length-1]
@@ -42,9 +42,6 @@ function unshortRecursive (urls, options, resolve, reject, depth=0) {
 }
 
 function unshort (url, options={}) {
-	options.method = options.method || "GET"
-	options.max_depth = options.max_depth || 10
-
 	var urls = []
 	urls.push(url)
 

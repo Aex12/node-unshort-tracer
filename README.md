@@ -32,7 +32,7 @@ var unshort = require('unshort-tracer')
 
 var options = {
     method: "HEAD", // Specify the HTTP method that will be used to make the HTTP request. Default: GET
-    max_depth: 20, // Specify how many redirections are we going to follow. Default: 10
+    max_depth: 20, // Specify how many redirections are we going to follow. Default: disabled, follow all redirections
     headers: {'User-Agent': 'Mozilla/5.0'} // Specify the headers that we will be sending in our request, for example an User-Agent.
 }
 
