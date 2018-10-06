@@ -7,8 +7,11 @@ unshort-tracer is a simple, dependency-less, promise-based library that can foll
 
 ### Usage
 Most simple use case would be unshorting an url and printing all the redirections: 
-```javascript var unshort = require('unshort-tracer') 
-unshort('http://bit.ly/2Os3Tiw') .then(urls => {
+```javascript 
+var unshort = require('unshort-tracer')
+
+unshort('http://bit.ly/2Os3Tiw')
+.then(urls => {
     console.log(urls[0]) // http://bit.ly/2Os3Tiw
     
     console.log(urls) // [ 'http://bit.ly/2Os3Tiw', 'https://goo.gl/6cwyTp',
@@ -21,12 +24,15 @@ unshort('http://bit.ly/2Os3Tiw') .then(urls => {
 
 ### Options
 We can supply options to the main function as second argument to modify the behaviour of the library. 
-```javascript var unshort = require('unshort-tracer') 
+```javascript
+var unshort = require('unshort-tracer') 
+
 var options = {
     method: "HEAD", // Specify the HTTP method that will be used to make the HTTP request. Default: GET
     max_depth: 20, // Specify how many redirections are we going to follow. Default: 10
     headers: {'User-Agent': 'Mozilla/5.0'} // Specify the headers that we will be sending in our request, for example an User-Agent.
 }
+
 unshort('http://bit.ly/2Os3Tiw', options)
 .then(processRedirections)
 ```
