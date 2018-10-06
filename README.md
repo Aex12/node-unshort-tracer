@@ -2,10 +2,12 @@
 ### What can do this library?
 unshort-tracer is a simple, dependency-less, promise-based library that can follow HTTP redirects and trace where is the url redirecting to. The main function returns an array with all the url redirections. Being the first element on this array the url suplied to the function, and the last element the final url.
 
-### Installation
+
+## Installation
 `$ npm install unshort-tracer --save`
 
-### Usage
+
+## Usage
 Most simple use case would be unshorting an url and printing all the redirections: 
 ```javascript 
 var unshort = require('unshort-tracer')
@@ -22,7 +24,8 @@ unshort('http://bit.ly/2Os3Tiw')
 })
 ```
 
-### Options
+
+## Options
 We can supply options to the main function as second argument to modify the behaviour of the library. 
 ```javascript
 var unshort = require('unshort-tracer') 
