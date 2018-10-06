@@ -23,8 +23,8 @@ unshort('http://bit.ly/2Os3Tiw') .then(urls => {
 We can supply options to the main function as second argument to modify the behaviour of the library. 
 ```javascript var unshort = require('unshort-tracer') 
 var options = {
-    method: "GET", // Specify the HTTP method that will be used to make the HTTP request.
-    max_depth: 20, // Specify how many redirections are we going to follow.
+    method: "HEAD", // Specify the HTTP method that will be used to make the HTTP request. Default: GET
+    max_depth: 20, // Specify how many redirections are we going to follow. Default: 10
     headers: {'User-Agent': 'Mozilla/5.0'} // Specify the headers that we will be sending in our request, for example an User-Agent.
 }
 unshort('http://bit.ly/2Os3Tiw', options)
