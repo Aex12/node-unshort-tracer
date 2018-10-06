@@ -1,6 +1,6 @@
 {
   "name": "unshort-tracer",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A simple library that let you unshort any url and trace all redirections",
   "main": "index.js",
   "scripts": {
